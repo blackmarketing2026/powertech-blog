@@ -4,16 +4,16 @@
     <div class="logo-text"><strong>PowerTech Performance</strong><em>Automobil-Blog · Erfurt</em></div>
   </a>
   <nav>
-    <a href="https://blog.powertech-performance.com/blog">Blog</a>
-    <a href="https://blog.powertech-performance.com/blog">Blog-Übersicht</a>
+    <a href="https://blog.powertech-performance.com/blog.shtml">Blog</a>
+    <a href="https://blog.powertech-performance.com/blog.shtml">Blog-Übersicht</a>
     <a href="https://www.powertech-performance.com/online-kontakt/" target="_blank" rel="noopener" class="nav-cta">Kontakt</a>
   </nav>
   <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
 </header>
 <div class="mobile-nav" id="mobileNav">
   <button class="close-btn" id="closeBtn">×</button>
-  <a href="https://blog.powertech-performance.com/blog" onclick="document.getElementById('mobileNav').classList.remove('open')">Blog</a>
-  <a href="https://blog.powertech-performance.com/blog" onclick="document.getElementById('mobileNav').classList.remove('open')">Blog-Übersicht</a>
+  <a href="https://blog.powertech-performance.com/blog.shtml" onclick="document.getElementById('mobileNav').classList.remove('open')">Blog</a>
+  <a href="https://blog.powertech-performance.com/blog.shtml" onclick="document.getElementById('mobileNav').classList.remove('open')">Blog-Übersicht</a>
   <a href="https://www.powertech-performance.com/online-kontakt/" target="_blank" rel="noopener" onclick="document.getElementById('mobileNav').classList.remove('open')">Kontakt</a>
 </div>
 

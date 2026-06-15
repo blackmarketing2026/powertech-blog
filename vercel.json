@@ -1,4 +1,6 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
   "env": {
@@ -6,15 +8,12 @@
   },
   "rewrites": [
     {
-      "source": "/:path((?!.*\\..*|.*/$).*)$",
-      "destination": "/:path.shtml"
-    }
-  ],
-  "redirects": [
+      "source": "/",
+      "destination": "/index.shtml"
+    },
     {
-      "source": "/:path(.*)/:rest.shtml",
-      "destination": "/:path:rest",
-      "permanent": true
+      "source": "^/(?!.*\\..*$)(?!.*\\/$)(.+)$",
+      "destination": "/$1.shtml"
     }
   ]
 }

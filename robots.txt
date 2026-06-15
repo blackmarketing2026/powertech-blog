@@ -1,0 +1,9 @@
+# PowerTech Performance Erfurt - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://powertechperformance.de/sitemap.xml
+
+# Crawl-Verzögerung (optional, für respektvolles Crawling)
+Crawl-delay: 1

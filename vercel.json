@@ -1,0 +1,20 @@
+{
+  "buildCommand": "echo 'No build needed'",
+  "outputDirectory": ".",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "rewrites": [
+    {
+      "source": "/:path((?!.*\\..*|.*/$).*)$",
+      "destination": "/:path.shtml"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path(.*)/:rest.shtml",
+      "destination": "/:path:rest",
+      "permanent": true
+    }
+  ]
+}

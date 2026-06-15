@@ -1,19 +1,22 @@
-# Enable Rewrite Engine
+# PowerTech Performance Blog - URL Rewrite Rules
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
 
     # Remove .shtml extension from URLs
+    # This converts /article-name.shtml to /article-name
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^([a-zA-Z0-9\-]+)$ $1.shtml [L]
+    RewriteCond %{REQUEST_URI} !^/index\.shtml$ 
+    RewriteRule ^([a-zA-Z0-9\-]+)/?$ $1.shtml [L,QSA]
     
-    # Redirect .shtml URLs to clean URLs (optional, for SEO)
-    RewriteCond %{THE_REQUEST} ^GET\ /(.+)\.shtml
-    RewriteRule ^(.+)\.shtml$ /$1 [R=301,L]
+    # Redirect .shtml URLs to clean URLs (SEO 301 redirect)
+    RewriteCond %{THE_REQUEST} ^GET\ /([a-zA-Z0-9\-]+)\.shtml
+    RewriteRule ^([a-zA-Z0-9\-]+)\.shtml$ /$1 [R=301,L]
 </IfModule>
 
-# Gzip Compression
+# Enable Gzip Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
 </IfModule>
@@ -26,4 +29,18 @@
     ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
 </IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Disable directory listing
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

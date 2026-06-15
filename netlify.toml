@@ -1,0 +1,43 @@
+# PowerTech Performance Blog - Netlify Configuration
+
+[build]
+  command = "echo 'No build needed'"
+  publish = "."
+
+# URL Rewrite Rules
+[[redirects]]
+  from = "/:path((?!.*\\..*|.*/$).*)"
+  to = "/:path.shtml"
+  status = 200
+  force = false
+
+# Remove .shtml extension (301 redirect for SEO)
+[[redirects]]
+  from = "/:path.shtml"
+  to = "/:path"
+  status = 301
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Caching Rules
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -3,17 +3,14 @@
   "framework": null,
   "buildCommand": "echo 'No build needed'",
   "outputDirectory": ".",
-  "env": {
-    "NODE_ENV": "production"
-  },
   "rewrites": [
     {
       "source": "/",
       "destination": "/index.shtml"
     },
     {
-      "source": "^/(?!.*\\..*$)(?!.*\\/$)(.+)$",
-      "destination": "/$1.shtml"
+      "source": "/:path((?!.*\\..*).*)",
+      "destination": "/:path.shtml"
     }
   ]
 }

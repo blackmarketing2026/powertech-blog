@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -847,20 +847,6 @@
 
   </aside>
 </div>
-
-
-      </p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 PowerTech Performance, Erfurt</span>
-    <span>
-      <a href="https://www.powertech-performance.com/impressum" target="_blank" rel="noopener">Impressum</a>
-      &nbsp;·&nbsp;
-      <a href="https://www.powertech-performance.com/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
-    </span>
-  </div>
-</footer>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/491737373574" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">

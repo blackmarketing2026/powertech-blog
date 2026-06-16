@@ -466,21 +466,22 @@
       border-top: 1px solid var(--border);
       margin-top: 2rem;
     }
-    .footer-inner {
+    .footer-top {
       max-width: 1100px;
       margin: 0 auto;
       padding: 3rem 2rem;
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 2.5rem;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2rem;
     }
-    .footer-brand p {
+    .footer-brand .logo-name { font-size: 1.1rem; }
+    .footer-brand p, .footer-tagline {
       font-size: 0.875rem;
       color: var(--muted);
       line-height: 1.7;
       margin-top: 0.75rem;
     }
-    .footer-contact h3 {
+    .footer-col h4 {
       font-family: var(--font-display);
       font-size: 0.72rem;
       font-weight: 700;
@@ -489,12 +490,14 @@
       color: var(--purple);
       margin-bottom: 0.75rem;
     }
-    .footer-contact p {
+    .footer-col a, .footer-col p {
+      display: block;
       font-size: 0.875rem;
       color: var(--muted);
+      text-decoration: none;
       line-height: 2;
     }
-    .footer-contact a { color: var(--purple); text-decoration: none; font-weight: 600; }
+    .footer-col a:hover { color: var(--purple); }
     .footer-bottom {
       max-width: 1100px;
       margin: 0 auto;
@@ -506,6 +509,7 @@
       font-size: 0.75rem;
       color: var(--muted);
     }
+    .footer-links { display: flex; gap: 1.25rem; align-items: center; }
     .footer-bottom a { color: var(--muted); text-decoration: none; }
     .footer-bottom a:hover { color: var(--purple); }
 
@@ -550,7 +554,7 @@
       .artikel-content { padding: 1.25rem; }
       .artikel-content h2 { font-size: 1.3rem; }
       .breadcrumb { padding: 0.75rem 1rem 0; }
-      .footer-inner { grid-template-columns: 1fr; padding: 2rem 1rem; }
+      .footer-top { grid-template-columns: 1fr; padding: 2rem 1rem; }
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1rem; }
       .whatsapp-btn span { display: none; }
       .whatsapp-btn { padding: 0.9rem; border-radius: 50%; bottom: 1.25rem; right: 1.25rem; }
